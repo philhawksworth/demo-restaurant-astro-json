@@ -1,36 +1,50 @@
-# demo-restaurant-astro-contentful
+# demo-restaurant-astro-json
 
- An example which uses content managed in Contentful to generate an archetypal restaurant site using [Astro](https://astro.build).
+ An example which uses structure content in JSON files to generate an archetypal restaurant site using [Astro](https://astro.build).
 
- 👉 https://demo-restaurant-contentful-astro.netlify.app/
- 
+ 👉 https://demo-restaurant-json-astro.netlify.app/
+
+
+This example is useful for exploring how Astro can generate a site from structured data. You can also use a [decoupled CMS](https://jamstack.org/glossary/decoupling/) to power such a site, either by consuming the CMS data directly from its API, or by adding a small layer of abstraction which populates the site's data files from the CMS ahead of each build.
+
+For an illustration of using Astro with a Netlify Build Plugin to pull content from a decoupled CMS, you can [explore this example](https://github.com/netlify/demo-restaurant-astro-contentful), and [read about this pattern in this blog post](https://www.netlify.com/blog/2021/10/25/learning-to-future-proof-sites-using-headless-cms-and-different-ssgs/). 
 
 ## Usage for Development and Deployment
 
+Clone this repo and then in your working directory:
 
-### add the Contentful creds to your project as environment variable
+```bash
+# install the dependencies including Astro
+npm i
 
-You can use the Netlify CLI for this
+# run the local development server
+npm run dev
 
 ```
 
-# Create or link your project with Netlify
+## Speedy start
+
+To clone this repo and instantly generate and deploy it for free on Netlify, click the Deploy To Netlify button below.
+
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/philhawksworth/demo-restaurant-astro-json&campaign=devex-ph")
+
+
+
+## For deployment to Netlify
+
+```bash
+# Install the Netlify CLI globally
+npm i -g netlify-cli
+
+# create a Netlify site as a deployment target
 netlify create
-# or
-netlify link
 
-# Add the Contentful Space ID
-netlify env:set CONTENTFUL_SPACE_ID XXX
-
-# Add the Contentful Content Delivery API access token
-netlify env:set CONTENTFUL_CONTENT_API_TOKEN XXX
-
-# Run Netlify Build to prime your build with the data 
-# This will use your centrally managed env vars
-netlify build
-
-# You now have data to build against
-netlify dev
+# deploy the latest local build to production
+npm run build
+netlify deploy --prod
 ```
+
+
 
 

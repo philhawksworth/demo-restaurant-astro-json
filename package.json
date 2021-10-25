@@ -12,7 +12,6 @@
         "astro": "^0.20.9"
     },
     "dependencies": {
-        "@netlify/demo-restaurant-sites-data": "^0.3.1",
         "luxon": "^2.0.2"
     }
 }
