@@ -2,7 +2,7 @@
 
  An example which uses structure content in JSON files to generate an archetypal restaurant site using [Astro](https://astro.build).
 
- 👉 https://demo-restaurant-json-astro.netlify.app/
+ 👉 https://demo-restaurant-astro-json.netlify.app/
 
 
 This example is useful for exploring how Astro can generate a site from structured data. You can also use a [decoupled CMS](https://jamstack.org/glossary/decoupling/) to power such a site, either by consuming the CMS data directly from its API, or by adding a small layer of abstraction which populates the site's data files from the CMS ahead of each build.
